@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/Style.css">
+</head>
+<body>
+     <div class="elf">
+         <div>
+            <h1 >name:</h1>
+
+        </div>
+     </div>
+     <form action="">
+        <label for="name-input">Name:</label>
+        <input type="text" name="" id="name-input">
+        <br>
+        <label for="age-input">Age:</label>
+        <input type="number" name="" id="age-input">
+        <br>
+        <label for="">Class</label>
+        <select onchange="ClassSelected()" name="" id="ClassSelector">
+            <option value="Fighter">Fighter</option>
+            <option value="Mage">Mage</option>
+            <option value="Theif">Theif</option>
+        </select>
+        <div id="chooseSpell" class="hide">
+            <label for="">Starting spell</label>
+            <input type="radio" name="spells" id=""> <label for="">Sleep</label>
+            <input type="radio" name="spells" id=""> <label for="">Charm Person</label>
+            <input type="radio" name="spells" id=""> <label for="">Magic Missle</label>
+        </div>
+        <br>
+       <button type="button" onclick="handleSubmit(event)">Submit</button>
+    </form>
+       
+       <div id="sheet" class="hide">
+            <h2>name:</h2>
+            <br>
+            <p id="name-output"></p>
+       </div>
+       
+       <script src="code/code.js"></script>
+</body>
+</html>

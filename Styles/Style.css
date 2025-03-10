@@ -1,0 +1,19 @@
+.elf{
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/027/429/030/small_2x/vines-border-frame-ai-generative-free-png.png");
+    background-repeat: no-repeat;
+    height: 500px;
+}
+form{
+    background-color: aqua;
+    border-style: double;
+    border-radius: 5px;
+    padding: 4%;
+}
+
+.characterSheet{
+    color: aqua;
+}
+
+.hide{
+    display: none;
+}
