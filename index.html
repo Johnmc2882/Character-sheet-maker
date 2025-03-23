@@ -7,34 +7,37 @@
     <link rel="stylesheet" href="./Styles/Style.css">
 </head>
 <body>
+    <form action="">
+        <h1 class="title">Create Your own character</h1>
+       <label for="name-input">Name:</label>
+       <input type="text" name="" id="name-input">
+       <br>
+       <label for="age-input">Age:</label>
+       <input type="number" name="" id="age-input">
+       <br>
+       <label for="">Class</label>
+       <select onchange="ClassSelected()" name="" id="ClassSelector">
+           <option value="Fighter">Fighter</option>
+           <option value="Mage">Mage</option>
+           <option value="Theif">Theif</option>
+       </select>
+       <div id="chooseSpell" class="hide">
+           <label for="">Starting spell</label>
+           <input type="radio" name="spells" id=""> <label for="">Sleep</label>
+           <input type="radio" name="spells" id=""> <label for="">Charm Person</label>
+           <input type="radio" name="spells" id=""> <label for="">Magic Missle</label>
+       </div>
+       <br>
+       <input type="range" id="Mana" name="Mana" min="0" max="10">
+       <br>
+      <button type="button" onclick="handleSubmit(event)">Submit</button>
+   </form>
      <div class="elf">
          <div>
             <h1 >name:</h1>
 
         </div>
      </div>
-     <form action="">
-        <label for="name-input">Name:</label>
-        <input type="text" name="" id="name-input">
-        <br>
-        <label for="age-input">Age:</label>
-        <input type="number" name="" id="age-input">
-        <br>
-        <label for="">Class</label>
-        <select onchange="ClassSelected()" name="" id="ClassSelector">
-            <option value="Fighter">Fighter</option>
-            <option value="Mage">Mage</option>
-            <option value="Theif">Theif</option>
-        </select>
-        <div id="chooseSpell" class="hide">
-            <label for="">Starting spell</label>
-            <input type="radio" name="spells" id=""> <label for="">Sleep</label>
-            <input type="radio" name="spells" id=""> <label for="">Charm Person</label>
-            <input type="radio" name="spells" id=""> <label for="">Magic Missle</label>
-        </div>
-        <br>
-       <button type="button" onclick="handleSubmit(event)">Submit</button>
-    </form>
        
        <div id="sheet" class="hide">
             <h2>name:</h2>

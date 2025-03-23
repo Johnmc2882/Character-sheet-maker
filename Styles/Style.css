@@ -17,3 +17,6 @@ form{
 .hide{
     display: none;
 }
+.title{
+    justify-self: center;
+}
