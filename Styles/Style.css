@@ -22,6 +22,9 @@ form{
 }
 .text{
     position: absolute;
-    top: 8px;
-    left: 50px;
+    top: 40px;
+    left: 55px;
+}
+label{
+    font-size: large;
 }

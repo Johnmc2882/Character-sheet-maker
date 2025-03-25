@@ -17,7 +17,7 @@
        <br>
        <label for="">Class</label>
        <select onchange="ClassSelected()" name="" id="ClassSelector">
-           <option value="Fighter">Fighter</option>
+           <option value ="Fighter">Fighter</option>
            <option value="Mage">Mage</option>
            <option value="Thief">Thief</option>
         </select>
@@ -51,7 +51,7 @@
            <input type="range" name="" value="0" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
            <output >0</output>
         </div>
-       <div id="chooseWeapon" class="hide">
+       <div id="chooseWeapon">
         <label for="">Starting Weapon</label>
         <input type="radio" name="Weapons" id="chooseWeapon"> <label for="">Fists</label>
         <input type="radio" name="Weapons" id="chooseWeapon"> <label for="">BroadSword</label>
@@ -67,10 +67,21 @@
          <div class="container">
             <img src="images/Fighterborder.png" alt="">
             <div class="text">
-                <h1>name:</h1> 
+                <label>Name:</label> 
                 <p1 id="name-output"></p1>
+                <br>
+                <label>Age:</label> 
+                <p1 id="Age-output"></p1>
+                <br>
+                <label id="Stealth">Stealth:</label> 
+                <p1 id="Stealth"></p1>
+                <br>
+                <label>Stamina:</label> 
+                <p1 id="Stamina"></p1>
+                <br>
+                <label>Class:</label>
+                <p id="SelectedClass"></p>
             </div>
-
         </div>
      </div>
        <script src="code/code.js"></script>

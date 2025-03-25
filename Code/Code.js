@@ -9,7 +9,8 @@ function handleSubmit(e){
     let chosenAge = document.querySelector("#Age-input").value;
     document.querySelector("#Age-output").innerHTML = chosenAge;
 
-    let ChosenClass = document.querySelector("Cl")
+    let ChosenClass = document.querySelector("ClassSelector").value;
+    document.querySelector("SelectedClass").innerHTML = ChosenClass;
 }
 
 
