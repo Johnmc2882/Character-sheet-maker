@@ -1,17 +1,14 @@
-.elf{
-    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/027/429/030/small_2x/vines-border-frame-ai-generative-free-png.png");
-    background-repeat: no-repeat;
+img{
     height: 500px;
 }
+
 form{
     background-color: aqua;
-    border-style: double;
+    border-style: dotted;
     border-radius: 5px;
-    padding: 4%;
-}
-
-.characterSheet{
-    color: aqua;
+    padding-left: 30%;
+    padding-right: 30%;
+    margin: auto;
 }
 
 .hide{
@@ -19,4 +16,12 @@ form{
 }
 .title{
     justify-self: center;
+}
+.container{
+    position: relative;
+}
+.text{
+    position: absolute;
+    top: 8px;
+    left: 50px;
 }

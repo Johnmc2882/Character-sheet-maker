@@ -8,19 +8,32 @@
 </head>
 <body>
     <form action="">
-        <h1 class="title">Create Your own character</h1>
-       <label for="name-input">Name:</label>
+        <h1 class="title"> Create Your own character</h1>
+        <label for="name-input">Name:</label>
        <input type="text" name="" id="name-input">
        <br>
-       <label for="age-input">Age:</label>
-       <input type="number" name="" id="age-input">
+       <label for="Age-input">Age:</label>
+       <input type="number" name="" id="Age-input">
        <br>
        <label for="">Class</label>
        <select onchange="ClassSelected()" name="" id="ClassSelector">
            <option value="Fighter">Fighter</option>
            <option value="Mage">Mage</option>
-           <option value="Theif">Theif</option>
-       </select>
+           <option value="Thief">Thief</option>
+        </select>
+        <br>
+        <div id="Health">
+            <label for="">Health (1-20)</label>
+            <input type="range" name="" value="1" min="1" max="20" oninput="this.nextElementSibling.value = this.value">
+            <output >1</output>
+        </div>
+       <br>
+       <div id="Stamina">
+           <label for="">Stamina (1-15)</label>
+           <input type="range" name="" value="1" min="1" max="15" oninput="this.nextElementSibling.value = this.value">
+           <output >1</output>
+        </div>
+        <br>
        <div id="chooseSpell" class="hide">
            <label for="">Starting spell</label>
            <input type="radio" name="spells" id=""> <label for="">Sleep</label>
@@ -28,23 +41,38 @@
            <input type="radio" name="spells" id=""> <label for="">Magic Missle</label>
        </div>
        <br>
-       <input type="range" id="Mana" name="Mana" min="0" max="10">
+       <div id="Stealth" class="hide">
+        <label for="">Stealth (0-10)</label>
+        <input type="range" name="" value="0" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+        <output >0</output>
+       </div>
+       <div id="Mana" class="hide">
+           <label for="">Mana (0-10)</label>
+           <input type="range" name="" value="0" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
+           <output >0</output>
+        </div>
+       <div id="chooseWeapon" class="hide">
+        <label for="">Starting Weapon</label>
+        <input type="radio" name="Weapons" id="chooseWeapon"> <label for="">Fists</label>
+        <input type="radio" name="Weapons" id="chooseWeapon"> <label for="">BroadSword</label>
+        <input type="radio" name="Weapons" id="chooseWeapon"> <label for="">Mace</label>
+        <input type="radio" name="Weapons" id="chooseWeapon"> <label for="">Lance</label>
+        <input type="radio" name="Weapons" id="chooseWeapon"> <label for="">Spear</label>
+    </div>
+    <br>
+       <button type="button" onclick="handleSubmit(event)">Submit</button>
+    </form>   
        <br>
-      <button type="button" onclick="handleSubmit(event)">Submit</button>
-   </form>
-     <div class="elf">
-         <div>
-            <h1 >name:</h1>
+     <div>
+         <div class="container">
+            <img src="images/Fighterborder.png" alt="">
+            <div class="text">
+                <h1>name:</h1> 
+                <p1 id="name-output"></p1>
+            </div>
 
         </div>
      </div>
-       
-       <div id="sheet" class="hide">
-            <h2>name:</h2>
-            <br>
-            <p id="name-output"></p>
-       </div>
-       
        <script src="code/code.js"></script>
 </body>
 </html>
