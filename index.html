@@ -7,63 +7,76 @@
     <link rel="stylesheet" href="./Styles/Style.css">
 </head>
 <body>
-    <form action="">
-        <h1 class="title"> Create Your own character</h1>
-        <label for="name-input">Name:</label>
-       <input type="text" name="" id="name-input">
-       <br>
-       <label for="Age-input">Age:</label>
-       <input type="number" name="" id="Age-input">
-       <br>
-       <label for="">Class</label>
-       <select onchange="ClassSelected()" name="" id="ClassSelector">
-           <option value ="Fighter">Fighter</option>
-           <option value="Mage">Mage</option>
-           <option value="Thief">Thief</option>
-        </select>
-        <br>
-        <div id="Health">
-            <label for="">Health (1-20)</label>
-            <input type="range" name="" value="1" min="1" max="20" oninput="this.nextElementSibling.value = this.value">
-            <output >1</output>
-        </div>
-       <br>
-       <div id="Stamina">
-           <label for="">Stamina (1-15)</label>
-           <input type="range" name="" value="1" min="1" max="15" oninput="this.nextElementSibling.value = this.value">
-           <output >1</output>
-        </div>
-        <br>
-       <div id="chooseSpell" class="hide">
-           <label for="">Starting spell</label>
-           <input type="radio" name="spells" id=""> <label for="">Sleep</label>
-           <input type="radio" name="spells" id=""> <label for="">Charm Person</label>
-           <input type="radio" name="spells" id=""> <label for="">Magic Missle</label>
-       </div>
-       <br>
-       <div id="Stealth" class="hide">
-        <label for="">Stealth (0-10)</label>
-        <input type="range" name="" value="0" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
-        <output >0</output>
-       </div>
-       <div id="Mana" class="hide">
-           <label for="">Mana (0-10)</label>
-           <input type="range" name="" value="0" min="1" max="10" oninput="this.nextElementSibling.value = this.value">
-           <output >0</output>
-        </div>
-       <div id="chooseWeapon">
-        <label for="">Starting Weapon</label>
-        <input type="radio" name="Weapons" id="chooseWeapon"> <label for="">Fists</label>
-        <input type="radio" name="Weapons" id="chooseWeapon"> <label for="">BroadSword</label>
-        <input type="radio" name="Weapons" id="chooseWeapon"> <label for="">Mace</label>
-        <input type="radio" name="Weapons" id="chooseWeapon"> <label for="">Lance</label>
-        <input type="radio" name="Weapons" id="chooseWeapon"> <label for="">Spear</label>
+    <div id="Creater" class="faded-In">
+
+        <form action="">
+            <h1 class="title"> Create Your own character</h1>
+            <label for="name-input">Name:</label>
+            <input type="text" name="" id="name-input">
+            <br>
+            <label for="Age-input">Age:</label>
+            <input type="number" name="" id="Age-input">
+            <br>
+            <div id="Sex-input">
+                <label for="">Choose your Gender:</label>
+                <input type="radio" name="Sex" value="Male" id="Male"> <label for="">Male</label>
+                <input type="radio" name="Sex" value="Female" id="Female"> <label for="">Female</label>
+                <input type="radio" name="Sex" value="Other" id="Other"> <label for="">Other</label>
+            </div>
+            <br>
+            <label for="">Class</label>
+            <select onchange="ClassSelected()" name="" id="ClassSelector">
+                <option value ="Fighter">Fighter</option>
+                <option value="Mage">Mage</option>
+                <option value="Thief">Thief</option>
+            </select>
+            <br>
+            <div id="Health">
+                <label for="">Health (1-20)</label>
+                <input type="range" name=""  value="1" min="1" max="20" oninput="this.nextElementSibling.value = this.value" id="Health-input">
+                <output >1</output> <!--https://stackoverflow.com/questions/10004723/html5-input-type-range-show-range-value-->
+            </div>
+            <br>
+            <div id="Stamina">
+                <label for="">Stamina (1-15)</label>
+                <input type="range" name="" value="1" min="1" max="15" oninput="this.nextElementSibling.value = this.value " id="Stamina-input">
+                <output >1</output>
+            </div>
+            <br>
+            <div id="chooseSpell" class="hide">
+                <label for="">Starting spell</label>
+                <input type="radio" name="spells" value="Sleep" id="Sleep"> <label for="">Sleep</label>
+                <input type="radio" name="spells" value="Charm" id="Charm"> <label for="">Charm Person</label>
+                <input type="radio" name="spells" value="Missle" id="Missle"> <label for="">Magic Missle</label>
+            </div>
+            <br>
+            <div id="Stealth" class="hide">
+                <label for="">Stealth (0-10)</label>
+                <input type="range" name="" value="0" min="1" max="10" oninput="this.nextElementSibling.value = this.value" id="Stealth-input">
+                <output >0</output>
+            </div>
+            <div id="Mana" class="hide">
+                <label for="">Mana (0-10)</label>
+                <input type="range" name="" value="0" min="1" max="10" oninput="this.nextElementSibling.value = this.value" id="Mana-input">
+                <output >0</output>
+            </div>
+            <div id="chooseWeapon">
+                <label for="">Starting Weapon</label>
+                <input type="radio" name="Weapons" id="Fists" value="Fists"> <label for="">Fists</label>
+                <input type="radio" name="Weapons" id="BroadSword" value="BroadSword"> <label for="">BroadSword</label>
+                <input type="radio" name="Weapons" id="Mace" value="Mace"> <label for="">Mace</label>
+                <input type="radio" name="Weapons" id="Lance" value="Lance"> <label for="">Lance</label>
+                <input type="radio" name="Weapons" id="Spear" value="Spear"> <label for="">Spear</label>
+            </div>
+            <br>
+            <label for="">Do you wish to confirm these settings</label>
+            <input type="checkbox" onclick="confirm()" id="Confirm" required>
+            <br>
+            <button type="button" id="Submit" onclick="handleSubmit(event)" class="hide">Submit</button>
+        </form>   
     </div>
-    <br>
-       <button type="button" onclick="handleSubmit(event)">Submit</button>
-    </form>   
        <br>
-     <div>
+     <div id="Sheet" class="faded-out">
          <div class="container">
             <img src="images/Fighterborder.png" alt="">
             <div class="text">
@@ -73,14 +86,35 @@
                 <label>Age:</label> 
                 <p1 id="Age-output"></p1>
                 <br>
+                <label>Gender:</label>
+                <p id="Sex-output"></p>
+                <br>
+                <label>Health</label>
+                <p id="Health-output"></p>
+                <br>
+                <label>Stamina</label>
+                <p id="Stamina-output"></p>
+                <br>
                 <label id="Stealth">Stealth:</label> 
-                <p1 id="Stealth"></p1>
+                <p id="Stealth"></p>
                 <br>
                 <label>Stamina:</label> 
-                <p1 id="Stamina"></p1>
+                <p id="Stamina"></p>
                 <br>
                 <label>Class:</label>
                 <p id="SelectedClass"></p>
+                <br>
+                <label id="Mana-output" class="hide" for=""></label>
+                <p id="Mana-output" class="hide"></p>
+                <br>
+                <label id="selectedWeapon" class="hide" for="">Chosen Weapon:</label>
+                <p id="selectedWeapon" class="hide"></p>
+                <br>
+                <label id="spell-output" class="hide" for="">Chosen spell:</label>
+                <p id="spell-output" class="hide"></p>
+                <br>
+                <label id="Stealth-output" class="hide" for="">Stealth:</label>
+                <p id="Stealth-output" class="hide"></p>
             </div>
         </div>
      </div>
