@@ -89,16 +89,7 @@ function handleSubmit(e){
     }
 }
 
-function confirm(){
- let Checkbox = document.querySelector("#Confirm").checked;
- if(Checkbox)
- {
-    document.querySelector("#Submit").classList.remove("hide");
- }
- else{
-    document.querySelector("#Submit").classList.add("hide");
- }
-}
+
 
 function ClassSelected(){
     console.log("Changed class");
